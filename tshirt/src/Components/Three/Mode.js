@@ -60,4 +60,8 @@ const Mode = () => {
           <Shirt />
         </Suspense>
       </Canvas>
-    </div>
+    </div>
+  )
+}
+
+export default Mode;
