@@ -1,17 +1,119 @@
-.navbar {
+* {
 	padding: 0;
 	margin: 0;
-	margin-top: 20px;
-	height: 40px;
-	background-color: blanchedalmond;
+	box-sizing: border-box;
 }
 
-.navbar__wrapper {
-	padding: 10px 20px;
+.header {
+	/* border: 2px solid brown; */
 	display: flex;
+	height: min-content;
+}
+
+.navbar__links {
+	/* border: 2px solid green; */
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	top: 40px;
+	left: 100px;
+}
+
+.navbar__icons {
+	/* border: 2px solid blue; */
+	position: relative;
+	left: 260px;
+}
+
+ul {
+	list-style: none;
+	display: flex;
+}
+
+.links {
+	color: black;
+	margin: 0 2em;
+}
+
+.icons {
+	color: black;
+	margin: 0 0.5em;
+}
+
+.navbar__logo {
+	position: relative;
+	left: 15px;
+}
+
+/* header {
+	padding: 0.8em 2em;
+	background-color: white;
+	position: fixed;
+	align-items: center;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: max-content;
+	margin-bottom: 2px;
+	border: 2px solid brown;
 	justify-content: center;
 }
 
-.navbar__content {
-	padding-right: 10%;
+.navbar__logo {
+	border: 2px solid pink;
+	float: left;
+	height: 100px;
+	width: 100px;
+	margin: 0px;
+	padding: 0px;
 }
+
+.navbar__links {
+	border: 2px solid yellow;
+	display: flex;
+	justify-content: space-between;
+	text-align: right;
+	margin-left: 30px;
+	margin-top: 20px;
+}
+
+ul {
+	border: 2px solid blue;
+	align-items: center;
+	display: flex;
+	justify-content: space-between;
+	list-style: none;
+	margin-left: 100px;
+}
+
+.links {
+	border: 2px solid rebeccapurple;
+	width: 8em;
+	display: block;
+	font-size: 1.5em;
+	text-align: center;
+	padding: 8px 10px;
+	text-decoration: white;
+	line-height: 1em;
+	font-style: normal;
+	color: black;
+	font-weight: normal;
+	margin-left: 70px;
+}
+
+.navbar__icons {
+	margin-left: 100px;
+	font-size: x-large;
+}
+
+.icons {
+	border: 2px solid green;
+	width: 2.2em;
+	height: 2em;
+	cursor: pointer;
+	margin: 0.5em 0.5em;
+	float: right;
+	justify-content: flex-end;
+} */
