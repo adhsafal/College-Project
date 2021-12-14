@@ -1,70 +1,3 @@
-// import React, { Suspense, useRef, useState } from 'react'
-// import { Canvas } from 'react-three-fiber'
-// import { useGLTF, OrbitControls, Stars } from '@react-three/drei'
-// import { proxy, useSnapshot } from 'valtio';
-
-
-// const state = proxy({
-//     current: null,
-//     items: {
-//         Shirt: '#ffffff',
-//         Collar: '#ff0000',
-//         Sleeve: '#000000',
-//     }
-// });
-
-
-// function Shirts(props) {
-//     const group = useRef()
-//     const snap = useSnapshot(state);
-//     const { nodes, materials } = useGLTF('/tshirt.glb')
-//     const { hovered, set } = useState(null)
-
-//     return (
-//         <group ref={group} {...props} dispose={null}
-//             onPointerOver={(e) => (e.stopPropagation(), set(e.object.material.name))}
-//             onPointerOut={(e) => e.intersections.length === 0 && set(null)}
-//             onPointerMissed={() => (state.current = null)}
-//             onClick={(e) => (e.stopPropagation(), (state.current = e.object.material.name))}>
-//             <group position={[0, 1, 0.56]} >
-//                 <mesh material-color={snap.items.Collar} geometry={nodes['T-shirt_2'].geometry} material={materials.Collar} />
-//                 <mesh material-color={snap.items.Shirt} geometry={nodes['T-shirt_1'].geometry} material={materials.Shirt} />
-//                 <mesh material-color={snap.items.Sleeve} geometry={nodes['T-shirt_3'].geometry} material={materials.Sleeve} />
-//                 {/* group.scale.set(2,2,2); */}
-//             </group>
-//         </group >
-//     )
-// }
-
-
-// function Picker() {
-//     const snap = useSnapshot(state)
-//     return (
-//         <div className="picker">
-//             {snap.current}
-//         </div>
-//     )
-// }
-
-
-// const Tshirt = () => {
-//     return (
-//         <>
-//             <Canvas>
-//                 <ambientLight intensity={0.5} />
-//                 <Suspense fallback={null}>
-//                     <Shirts style={{ height: '200px' }} />
-//                     <Stars />
-//                 </Suspense>
-//                 <OrbitControls minPolarAngle={Math.PI / 2} maxPolarAngle={Math.PI / 2} enableZoom={true} enablePan={true} />
-//             </Canvas>
-//             <Picker />
-//         </>
-//     )
-// }
-
-// export default Tshirt
-
 import React, { Suspense, useRef, useState, useEffect } from "react"
 import { Canvas, useFrame } from "@react-three/fiber"
 import { ContactShadows, Environment, useGLTF, OrbitControls } from "@react-three/drei"
@@ -74,16 +7,20 @@ import { proxy, useSnapshot } from "valtio"
 const state = proxy({
     current: null,
     items: {
-        Shirt: "#blue",
-        Collar: "green",
-        Sleeve: "#ffffff",
+        Body: "black",
+        sleeve: "black",
+        ['Upper Sleeve']: "black",
+        belt: "black",
+        collar: "black",
+        bottombase: "black",
+        bottoms: "black",
     },
 })
 
 function Shirt() {
     const ref = useRef()
     const snap = useSnapshot(state)
-    const { nodes, materials } = useGLTF("./tshirt.glb")
+    const { nodes, materials } = useGLTF("./tshirt2.glb")
 
     // useFrame((state) => {
     //     const t = state.clock.getElapsedTime()
@@ -113,11 +50,14 @@ function Shirt() {
             onPointerMissed={() => (state.current = null)}
             onClick={(e) => (e.stopPropagation(), (state.current = e.object.material.name))}>
             <group position={[0, 1, 0.56]} >
-//                 <mesh material-color={snap.items.Collar} geometry={nodes['T-shirt_2'].geometry} material={materials.Collar} />
-//                 <mesh material-color={snap.items.Shirt} geometry={nodes['T-shirt_1'].geometry} material={materials.Shirt} />
-//                 <mesh material-color={snap.items.Sleeve} geometry={nodes['T-shirt_3'].geometry} material={materials.Sleeve} />
-//                 {/* group.scale.set(2,2,2); */}
-//             </group>
+                <mesh material-color={snap.items.Body} geometry={nodes['Shirt_1'].geometry} material={materials.Body} />
+                <mesh material-color={snap.items.sleeve} geometry={nodes['Shirt_2'].geometry} material={materials.sleeve} />
+                <mesh material-color={snap.items.Upper_Sleeve} geometry={nodes['Shirt_3'].geometry} material={materials['Upper Sleeve']} />
+                <mesh material-color={snap.items.belt} geometry={nodes['Shirt_4'].geometry} material={materials.belt} />
+                <mesh material-color={snap.items.collar} geometry={nodes['Shirt_5'].geometry} material={materials.collar} />
+                <mesh material-color={snap.items.bottombase} geometry={nodes['Shirt_6'].geometry} material={materials.bottombase} />
+                <mesh material-color={snap.items.bottoms} geometry={nodes['Shirt_7'].geometry} material={materials.bottoms} />
+            </group>
         </group>
     )
 }
@@ -137,7 +77,7 @@ function Picker() {
     )
 }
 
-const Tshirt = () => {
+const Tshirt2 = () => {
     return (
         <>
             <Canvas shadows dpr={[1, 2]} camera={{ position: [0, 0, 4], fov: 50 }}>
@@ -148,11 +88,11 @@ const Tshirt = () => {
                     {/* <Environment preset="city" /> */}
                     <ContactShadows rotation-x={Math.PI / 2} position={[0, -0.8, 0]} opacity={0.25} width={10} height={10} blur={1.5} far={0.8} />
                 </Suspense>
-                <OrbitControls minPolarAngle={Math.PI / 2} maxPolarAngle={Math.PI / 2} enableZoom={false} enablePan={false} />
+                <OrbitControls minPolarAngle={Math.PI / 2} maxPolarAngle={Math.PI / 2} enableZoom={true} enablePan={false} />
             </Canvas>
             <Picker />
         </>
     )
 }
 
-export default Tshirt;
+export default Tshirt2;

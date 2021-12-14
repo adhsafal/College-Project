@@ -11,19 +11,18 @@ const Navbar = () => {
                 <img className='navbar__logo'
                     src="logo.png"
                     alt="logo"
-                    height={"110px"}
-                    width={"130px"} />
+                />
             </Link>
-            <nav className="navbar__links">
+            <nav className="navbar__contents">
                 <ul>
                     <li><Link to='/' style={{ textDecoration: 'none' }}>
-                        <h2 className='links'>Home</h2>
+                        <h2 className='navbar__links'>Home</h2>
                     </Link></li>
                     <li><Link to='/product' style={{ textDecoration: 'none' }}>
-                        <h2 className='links'>Product</h2>
+                        <h2 className='navbar__links'>Product</h2>
                     </Link></li>
                     <li><Link to='/customize' style={{ textDecoration: 'none' }}>
-                        <h2 className='links' >Customize</h2>
+                        <h2 className='navbar__links' >Customize</h2>
                     </Link></li>
 
                 </ul>
