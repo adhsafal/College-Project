@@ -7,13 +7,13 @@ import { proxy, useSnapshot } from "valtio"
 const state = proxy({
     current: null,
     items: {
-        Body: "black",
-        sleeve: "black",
-        ['Upper Sleeve']: "black",
-        belt: "black",
-        collar: "black",
-        bottombase: "black",
-        bottoms: "black",
+        body: "black",
+        lowerSleeve: "blue",
+        upperSleeve: "green",
+        belt: "brown",
+        collar: "purple",
+        bottomBase: "grey",
+        bottoms: "orange",
     },
 })
 
@@ -50,12 +50,12 @@ function Shirt() {
             onPointerMissed={() => (state.current = null)}
             onClick={(e) => (e.stopPropagation(), (state.current = e.object.material.name))}>
             <group position={[0, 1, 0.56]} >
-                <mesh material-color={snap.items.Body} geometry={nodes['Shirt_1'].geometry} material={materials.Body} />
-                <mesh material-color={snap.items.sleeve} geometry={nodes['Shirt_2'].geometry} material={materials.sleeve} />
-                <mesh material-color={snap.items.Upper_Sleeve} geometry={nodes['Shirt_3'].geometry} material={materials['Upper Sleeve']} />
+                <mesh material-color={snap.items.body} geometry={nodes['Shirt_1'].geometry} material={materials.body} />
+                <mesh material-color={snap.items.lowerSleeve} geometry={nodes['Shirt_2'].geometry} material={materials.lowerSleeve} />
+                <mesh material-color={snap.items.upperSleeve} geometry={nodes['Shirt_3'].geometry} material={materials.upperSleeve} />
                 <mesh material-color={snap.items.belt} geometry={nodes['Shirt_4'].geometry} material={materials.belt} />
                 <mesh material-color={snap.items.collar} geometry={nodes['Shirt_5'].geometry} material={materials.collar} />
-                <mesh material-color={snap.items.bottombase} geometry={nodes['Shirt_6'].geometry} material={materials.bottombase} />
+                <mesh material-color={snap.items.bottomBase} geometry={nodes['Shirt_6'].geometry} material={materials.bottomBase} />
                 <mesh material-color={snap.items.bottoms} geometry={nodes['Shirt_7'].geometry} material={materials.bottoms} />
             </group>
         </group>

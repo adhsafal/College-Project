@@ -11,12 +11,12 @@ export default function Model({ ...props }) {
   return (
     <group ref={group} {...props} dispose={null}>
       <group rotation={[Math.PI / 2, 0, 0]} scale={0.05}>
-        <mesh geometry={nodes.Shirt_1.geometry} material={materials.Body} />
-        <mesh geometry={nodes.Shirt_2.geometry} material={materials.sleeve} />
-        <mesh geometry={nodes.Shirt_3.geometry} material={materials['Upper Sleeve']} />
+        <mesh geometry={nodes.Shirt_1.geometry} material={materials.body} />
+        <mesh geometry={nodes.Shirt_2.geometry} material={materials.lowerSleeve} />
+        <mesh geometry={nodes.Shirt_3.geometry} material={materials.upperSleeve} />
         <mesh geometry={nodes.Shirt_4.geometry} material={materials.belt} />
         <mesh geometry={nodes.Shirt_5.geometry} material={materials.collar} />
-        <mesh geometry={nodes.Shirt_6.geometry} material={materials.bottombase} />
+        <mesh geometry={nodes.Shirt_6.geometry} material={materials.bottomBase} />
         <mesh geometry={nodes.Shirt_7.geometry} material={materials.bottoms} />
       </group>
     </group>

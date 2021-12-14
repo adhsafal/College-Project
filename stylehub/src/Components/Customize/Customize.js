@@ -15,7 +15,6 @@ const Customize = () => {
                 left: '200px',
                 top: '50px',
 
-
             }}>
                 <Tshirt2 />
             </div>
