@@ -4,16 +4,12 @@ import './Navbar.css'
 import { Link } from 'react-router-dom'
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import Logo from '../Logo/Logo';
 
 const Navbar = () => {
     return (
         <header className='header'>
-            <Link to="/">
-                <img className='navbar__logo'
-                    src="logo.png"
-                    alt="logo"
-                />
-            </Link>
+            <Logo />
             <nav className="navbar__contents">
                 <ul>
                     <li><Link to='/' style={{ textDecoration: 'none' }}>
