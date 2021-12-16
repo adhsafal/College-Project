@@ -1,5 +1,6 @@
 import React from 'react'
 import './Navbar.css'
+
 import { Link } from 'react-router-dom'
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
@@ -27,7 +28,7 @@ const Navbar = () => {
 
                 </ul>
                 <ul className='navbar__icons'>
-                    <li><Link to='/product'><AccountCircleIcon className='icons' /></Link></li>
+                    <li><Link to='/login'><AccountCircleIcon className='icons' /></Link></li>
                     <li><Link to='/product'><ShoppingCartIcon className='icons' /></Link></li>
                 </ul>
             </nav>
