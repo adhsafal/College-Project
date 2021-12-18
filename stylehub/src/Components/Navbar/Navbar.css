@@ -8,34 +8,30 @@
 	/* border: 2px solid brown; */
 	display: flex;
 	height: min-content;
+	align-items: center;
 }
 
 .navbar__contents {
 	/* border: 2px solid green; */
 	width: min-content;
 	display: flex;
-	justify-content: center;
-	align-items: center;
 	position: fixed;
 	height: 7vh;
-	top: 40px;
-	left: 25em;
+	left: 13em;
 }
 
 .navbar__links {
 	/* border: 2px solid orange; */
-	color: black;
 	margin: 0 2em;
 	position: relative;
 	left: 2em;
-	bottom: 0.5em;
 }
 
 .navbar__icons {
 	/* border: 2px solid blue; */
 	position: relative;
-	left: 260px;
-	bottom: 10px;
+	top: 0.5em;
+	left: 15em;
 	align-items: center;
 }
 
@@ -46,7 +42,6 @@ ul {
 
 .icons {
 	color: black;
-	margin: 0 0.5em;
 }
 
 /* .navbar__logo {

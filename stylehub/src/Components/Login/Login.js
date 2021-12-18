@@ -1,7 +1,8 @@
 import React from 'react'
 import './Login.css'
 
-import Navbar from '../Navbar/Navbar'
+// import '../../../node_modules/bootstrap/dist/css/bootstrap.css'
+
 import { Link } from 'react-router-dom'
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import Logo from '../Logo/Logo';
@@ -34,7 +35,7 @@ const Login = () => {
 
                         <input type="text" id="login" className="fadeIn second" name="login" placeholder="login" required />
                         <input type="text" id="password" className="fadeIn third" name="login" placeholder="password" />
-                        <input type="submit" className="fadeIn fourth" value="Log In" style={{ marginTop: '3em' }} />
+                        <input type="submit" className="fadeIn fourth" value="Log In" style={{ marginTop: '3em', fontWeight: 'bolder' }} />
                         <div id="formFooter">
                             <a className="underlineHover" href="#" style={{ color: 'black', fontSize: '1.1em', fontWeight: 'bolder' }}>Forgot Password?</a>
                         </div>

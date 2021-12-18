@@ -1,3 +1,4 @@
+import { fontWeight } from '@mui/system'
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Logo from '../Logo/Logo'
@@ -29,7 +30,7 @@ const Registration = () => {
                         <input type="text" id="number" className="fadeIn second" name="number" placeholder="Phn. number" />
                         <input type="text" id="password" className="fadeIn third" name="login" placeholder="Password" />
                         <input type="text" id="password" className="fadeIn third" name="login" placeholder="Confirm password" />
-                        <input type="submit" className="fadeIn fourth" value="Register" />
+                        <input type="submit" className="fadeIn fourth" value="Register" style={{ marginTop: '3em', fontWeight: 'bolder' }} />
 
                     </div>
                 </div>
