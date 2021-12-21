@@ -32,7 +32,7 @@ const Navbar = () => {
                     </li>
                     <li>
                         <button type="button" className="btn position-relative">
-                            <Link to='/product'><ShoppingCartIcon className='icons' /></Link>
+                            <Link to='/cart'><ShoppingCartIcon className='icons' /></Link>
                             <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                                 0
                             </span>

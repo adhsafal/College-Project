@@ -15,7 +15,7 @@
 	/* border: 2px solid green; */
 	width: min-content;
 	display: flex;
-	position: fixed;
+	/* position: fixed; */
 	height: 7vh;
 	left: 13em;
 }
@@ -24,14 +24,14 @@
 	/* border: 2px solid orange; */
 	margin: 0 2em;
 	position: relative;
-	left: 2em;
+	left: 6.5em;
 }
 
 .navbar__icons {
 	/* border: 2px solid blue; */
 	position: relative;
 	top: 0.5em;
-	left: 15em;
+	left: 20em;
 	align-items: center;
 }
 

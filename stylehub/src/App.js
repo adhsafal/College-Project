@@ -6,6 +6,7 @@ import Home from './Components/Home/Home';
 import Product from './Components/Product/Product';
 import Login from './Components/Login/Login'
 import Registration from './Components/Registration/Registration';
+import Cart from './Components/Cart/Cart';
 
 function App() {
   return (
@@ -16,6 +17,8 @@ function App() {
         <Route path="/customize" element={<Customize />} />
         <Route path="/login" element={<Login />} />
         <Route path="/registration" element={<Registration />} />
+        <Route path="/cart" element={<Cart />} />
+
       </Routes>
     </>
   );

@@ -32,7 +32,6 @@ const Login = () => {
                         <div className="fadeIn first">
                             <AccountCircleIcon style={{ fontSize: '3em' }} />
                         </div>
-
                         <input type="text" id="login" className="fadeIn second" name="login" placeholder="login" required />
                         <input type="text" id="password" className="fadeIn third" name="login" placeholder="password" />
                         <input type="submit" className="fadeIn fourth" value="Log In" style={{ marginTop: '3em', fontWeight: 'bolder' }} />
