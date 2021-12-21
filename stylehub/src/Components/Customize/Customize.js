@@ -1,5 +1,6 @@
 import React from 'react'
 import Navbar from '../Navbar/Navbar'
+import Hoodie from '../Three/Hoodie'
 import Tshirt2 from '../Three/Tshirt2'
 
 const Customize = () => {
@@ -16,7 +17,7 @@ const Customize = () => {
                 top: '50px',
 
             }}>
-                <Tshirt2 />
+                <Hoodie />
             </div>
         </div>
     )

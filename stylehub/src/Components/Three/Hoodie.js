@@ -7,20 +7,16 @@ import { proxy, useSnapshot } from "valtio"
 const state = proxy({
     current: null,
     items: {
-        body: "black",
-        lowerSleeve: "blue",
-        upperSleeve: "green",
-        belt: "brown",
-        collar: "purple",
-        bottomBase: "grey",
-        bottoms: "orange",
+        front: "blue",
+        back: "green",
+        hood: "#ffffff",
     },
 })
 
 function Shirt() {
     const ref = useRef()
     const snap = useSnapshot(state)
-    const { nodes, materials } = useGLTF("./tshirt2.glb")
+    const { nodes, materials } = useGLTF("./hoodie.glb")
 
     // useFrame((state) => {
     //     const t = state.clock.getElapsedTime()
@@ -49,14 +45,10 @@ function Shirt() {
             onPointerOut={(e) => e.intersections.length === 0 && set(null)}
             onPointerMissed={() => (state.current = null)}
             onClick={(e) => (e.stopPropagation(), (state.current = e.object.material.name))}>
-            <group rotation={[1.6, 0, 0]} position={[0, -8, 0.56]}>
-                <mesh material-color={snap.items.body} geometry={nodes['Shirt_1'].geometry} material={materials.body} />
-                <mesh material-color={snap.items.lowerSleeve} geometry={nodes['Shirt_2'].geometry} material={materials.lowerSleeve} />
-                <mesh material-color={snap.items.upperSleeve} geometry={nodes['Shirt_3'].geometry} material={materials.upperSleeve} />
-                <mesh material-color={snap.items.belt} geometry={nodes['Shirt_4'].geometry} material={materials.belt} />
-                <mesh material-color={snap.items.collar} geometry={nodes['Shirt_5'].geometry} material={materials.collar} />
-                <mesh material-color={snap.items.bottomBase} geometry={nodes['Shirt_6'].geometry} material={materials.bottomBase} />
-                <mesh material-color={snap.items.bottoms} geometry={nodes['Shirt_7'].geometry} material={materials.bottoms} />
+            <group rotation={[Math.PI / 2, 0, 0]} position={[0, -1.3, 0]}>
+                <mesh material-color={snap.items.front} geometry={nodes['model002_1'].geometry} material={materials.front} />
+                <mesh material-color={snap.items.back} geometry={nodes['model002_2'].geometry} material={materials.back} />
+                <mesh material-color={snap.items.hood} geometry={nodes['model002_3'].geometry} material={materials.hood} />
             </group>
         </group>
     )
@@ -77,7 +69,7 @@ function Picker() {
     )
 }
 
-const Tshirt2 = () => {
+const Hoodie = () => {
     return (
         <>
             <Canvas shadows dpr={[1, 2]} camera={{ position: [0, 0, 4], fov: 50 }}>
@@ -95,4 +87,4 @@ const Tshirt2 = () => {
     )
 }
 
-export default Tshirt2;
+export default Hoodie;

@@ -4,114 +4,95 @@ import { Link } from 'react-router-dom'
 
 import Navbar from '../Navbar/Navbar'
 import Tshirt from '../Three/Tshirt'
+import Hoodie from '../Three/Hoodie'
+import Tshirt2 from '../Three/Tshirt2'
 
 const Product = () => {
     return (
         <>
             <Navbar />
-            <div class="container">
-                <h3 class="text-center">ALL PRODUCTS</h3>
-                <div class="row">
-                    {/* <!-- Product  --> */}
-                    <div class="col-md-4 product-grid">
-                        <div class="image">
-                            <a href="#">
-                                <img src="images/apple-watch.jpg" class="w-100" />
-                                <div class="overlay">
-                                    <div class="detail">View Details</div>
+            <div className="wrapper">
+                <div className="container">
+                    <div className="row g-1">
+                        <div className="col-md-3">
+                            <div className="card p-3">
+                                <div className="text-center" style={{ height: '15em' }}>
+                                    <Hoodie />
                                 </div>
-                            </a>
-                        </div>
-                        <h5 class="text-center">Apple Watch Series 3 Aluminium</h5>
-                        <h5 class="text-center">Price: $550.00</h5>
-                        <a href="#" class="btn buy">Add to Cart</a>
-                    </div>
-                    {/* <!-- ./Product --> */}
-
-                    {/* <!-- Product  --> */}
-                    <div class="col-md-4 product-grid">
-                        <div class="image">
-                            <a href="#">
-                                <img src="images/beat.jpg" class="w-100" />
-                                <div class="overlay">
-                                    <div class="detail">View Details</div>
+                                <div className="product-details">
+                                    <span className="font-weight-bold d-block">$ 7.00</span>
+                                    <span>Hoodie</span>
+                                    <div className="buttons d-flex flex-row">
+                                        <div className="cart">
+                                            <i className="fa fa-shopping-cart"></i>
+                                        </div>
+                                        <button className="btn btn-success cart-button btn-block">
+                                            <span className="dot">1</span>Add to cart
+                                        </button>
+                                    </div>
+                                    <div className="weight"> <small>Buy 3 piece Get 1 piece free!!</small> </div>
                                 </div>
-                            </a>
+                            </div>
                         </div>
-                        <h5 class="text-center">Beats Solo 3 Wireless</h5>
-                        <h5 class="text-center">Price: $159.00</h5>
-                        <a href="#" class="btn buy">BUY</a>
-                    </div>
-                    {/* <!-- ./Product --> */}
-
-                    {/* <!-- Product  --> */}
-                    <div class="col-md-4 product-grid">
-                        <div class="image">
-                            <a href="#">
-                                <img src="images/imac.jpg" class="w-100" />
-                                <div class="overlay">
-                                    <div class="detail">View Details</div>
+                        <div className="col-md-3">
+                            <div className="card p-3">
+                                <div className="text-center" style={{ height: '15em' }}>
+                                    <Tshirt />
                                 </div>
-                            </a>
-                        </div>
-                        <h5 class="text-center">Apple iMac</h5>
-                        <h5 class="text-center">Price: $1,699.00</h5>
-                        <a href="#" class="btn buy">BUY</a>
-                    </div>
-                    {/* <!-- ./Product --> */}
-
-                    {/* <!-- Product  --> */}
-                    <div class="col-md-4 product-grid">
-                        <div class="image">
-                            <a href="#">
-                                <img src="images/ipad.jpg" class="w-100" />
-                                <div class="overlay">
-                                    <div class="detail">View Details</div>
+                                <div className="product-details">
+                                    <span className="font-weight-bold d-block">$ 7.00</span>
+                                    <span>T-Shirt</span>
+                                    <div className="buttons d-flex flex-row">
+                                        <div className="cart">
+                                            <i className="fa fa-shopping-cart"></i></div>
+                                        <button className="btn btn-success cart-button btn-block">
+                                            <span className="dot">1</span>Add to cart
+                                        </button>
+                                    </div>
+                                    <div className="weight"> <small>Buy 3 piece Get 1 piece free!!</small> </div>
                                 </div>
-                            </a>
+                            </div>
                         </div>
-                        <h5 class="text-center">Apple iPad</h5>
-                        <h5 class="text-center">Price: $415.99</h5>
-                        <a href="#" class="btn buy">BUY</a>
-                    </div>
-                    {/* <!-- ./Product --> */}
-
-                    {/* <!-- Product  --> */}
-                    <div class="col-md-4 product-grid">
-                        <div class="image">
-                            <a href="#">
-                                <img src="images/iphone.jpg" class="w-100" />
-                                <div class="overlay">
-                                    <div class="detail">View Details</div>
+                        <div className="col-md-3">
+                            <div className="card p-3">
+                                <div className="text-center" style={{ height: '15em' }}>
+                                    <Tshirt />
                                 </div>
-                            </a>
-                        </div>
-                        <h5 class="text-center">Apple iPhone X</h5>
-                        <h5 class="text-center">Price: $1,342.00</h5>
-                        <a href="#" class="btn buy">BUY</a>
-                    </div>
-                    {/* <!-- ./Product --> */}
-
-                    {/* <!-- Product  --> */}
-                    <div class="col-md-4 product-grid">
-                        <div class="image">
-                            <a href="#">
-                                <img src="images/macbook.jpg" class="w-100" />
-                                <div class="overlay">
-                                    <div class="detail">View Details</div>
+                                <div className="product-details">
+                                    <span className="font-weight-bold d-block">$ 7.00</span>
+                                    <span>T-Shirt</span>
+                                    <div className="buttons d-flex flex-row">
+                                        <div className="cart">
+                                            <i className="fa fa-shopping-cart"></i></div>
+                                        <button className="btn btn-success cart-button btn-block">
+                                            <span className="dot">1</span>Add to cart
+                                        </button>
+                                    </div>
+                                    <div className="weight"> <small>Buy 3 piece Get 1 piece free!!</small> </div>
                                 </div>
-                            </a>
+                            </div>
                         </div>
-                        <h5 class="text-center">Apple MacBook</h5>
-                        <h5 class="text-center">Price: $2,699.00</h5>
-                        <a href="#" class="btn buy">BUY</a>
+                        <div className="col-md-3">
+                            <div className="card p-3">
+                                <div className="text-center" style={{ height: '15em' }}>
+                                    <Tshirt />
+                                </div>
+                                <div className="product-details">
+                                    <span className="font-weight-bold d-block">$ 7.00</span>
+                                    <span>T-Shirt</span>
+                                    <div className="buttons d-flex flex-row">
+                                        <div className="cart"><i className="fa fa-shopping-cart"></i></div>
+                                        <button className="btn btn-success cart-button btn-block">
+                                            <span className="dot">1</span>Add to cart
+                                        </button>
+                                    </div>
+                                    <div className="weight"> <small>Buy 3 piece Get 1 piece free!!</small> </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    {/* <!-- ./Product --> */}
-
                 </div>
-
             </div>
-
         </>
     )
 }
