@@ -1,3 +1,21 @@
-.customize__body {
+.row {
+	justify-content: center;
+	align-items: center;
+}
+
+.container,
+.row .sections__middle {
+	height: 70vh;
+}
+
+.customize__quantity {
 	display: flex;
+}
+
+.customize__quantity p {
+	margin-left: 2em;
+	margin-top: 0.5em;
+	border: 1.5px solid black;
+	padding: 0.5em 0.5em;
+	border-radius: 25%;
 }

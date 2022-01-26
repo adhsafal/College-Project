@@ -82,7 +82,7 @@ const Hoodie = () => {
                 </Suspense>
                 <OrbitControls minPolarAngle={Math.PI / 2} maxPolarAngle={Math.PI / 2} enableZoom={true} enablePan={false} />
             </Canvas>
-            <Picker />
+            {/* <Picker /> */}
         </>
     )
 }

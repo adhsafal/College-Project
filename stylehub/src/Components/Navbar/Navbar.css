@@ -44,6 +44,10 @@ ul {
 	color: black;
 }
 
+.navbar__links:hover {
+	color: red;
+}
+
 /* .navbar__logo {
 	
 	position: relative;
