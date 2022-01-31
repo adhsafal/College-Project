@@ -10,6 +10,7 @@ import TextField from '@mui/material/TextField';
 import Hoodie from '../Three/Hoodie'
 import Tshirt2 from '../Three/Tshirt2'
 import Tshirt from '../Three/Tshirt'
+import Login from '../Login/Login';
 
 
 
@@ -52,13 +53,14 @@ const Customize = () => {
                             T-Shirt
                         </h1>
                         <p style={{ fontWeight: 'bold' }}>Please select the appropriate size and color you want in your T-shirt</p>
+
                     </div>
                     <div className="sections__middle col-md-6" >
                         <div className="customize__product" style={{
                             height: '100%',
                             width: '100%',
                         }}>
-                            <Hoodie />
+                            <Tshirt />
                         </div>
                     </div>
                     <div className="sections__right col-md-3" >

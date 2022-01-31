@@ -50,6 +50,8 @@ function Shirt() {
                 <mesh material-color={snap.items.back} geometry={nodes['model002_2'].geometry} material={materials.back} />
                 <mesh material-color={snap.items.hood} geometry={nodes['model002_3'].geometry} material={materials.hood} />
             </group>
+
+
         </group>
     )
 }
@@ -82,7 +84,7 @@ const Hoodie = () => {
                 </Suspense>
                 <OrbitControls minPolarAngle={Math.PI / 2} maxPolarAngle={Math.PI / 2} enableZoom={true} enablePan={false} />
             </Canvas>
-            {/* <Picker /> */}
+            <Picker />
         </>
     )
 }
