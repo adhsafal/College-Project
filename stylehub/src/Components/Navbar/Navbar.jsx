@@ -19,7 +19,7 @@ const Navbar = () => {
                     <span className="navbar-toggler-icon"></span>
                 </button>
                 <div className="collapse navbar-collapse" id="navbarNav">
-                    <ul className="navbar-nav justify-content-center">
+                    <ul className="navbar-nav">
                         <li className="nav-item">
                             <Link className="nav-link navbar__links active" aria-current="page" to="/">Home</Link>
                         </li>
@@ -29,21 +29,21 @@ const Navbar = () => {
                         <li className="nav-item">
                             <Link className="nav-link navbar__links" to="/customize">Customize</Link>
                         </li>
-                    </ul>
-                    <ul className='navbar-nav navbar__icons'>
-                        <li className='nav-item'>
-                            <button type="button" className="btn position-relative">
-                                <Link to='/login'><AccountCircleIcon className='icons' /></Link>
-                            </button>
-                        </li>
-                        <li className='nav-item'>
-                            <button type="button" className="btn position-relative">
-                                <Link to='/cart'><ShoppingCartIcon className='icons' /></Link>
-                                <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                                    0
-                                </span>
-                            </button>
-                        </li>
+                        <div className="navbar__icons">
+                            <li className='nav-item'>
+                                <button type="button" className="btn position-relative">
+                                    <Link to='/login'><AccountCircleIcon className='icons' /></Link>
+                                </button>
+                            </li>
+                            <li className='nav-item'>
+                                <button type="button" className="btn position-relative">
+                                    <Link to='/cart'><ShoppingCartIcon className='icons' /></Link>
+                                    <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                        0
+                                    </span>
+                                </button>
+                            </li>
+                        </div>
                     </ul>
                 </div>
             </div>

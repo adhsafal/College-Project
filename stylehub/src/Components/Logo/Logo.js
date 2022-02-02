@@ -8,9 +8,7 @@ const Logo = () => {
                 <img src="logo.png"
                     alt="logo"
                     style={{
-                        position: "relative",
-                        height: "15vh",
-                        left: "15px"
+                        height: "17vh",
                     }}
                 />
             </Link>
