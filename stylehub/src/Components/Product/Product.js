@@ -11,7 +11,13 @@ const Product = () => {
     return (
         <>
             <Navbar />
-            <div className="wrapper">
+
+            <div className="carousel">
+                <a href=""></a>
+            </div>
+
+
+            {/* <div className="wrapper">
                 <div className="container">
                     <div className="row g-1">
                         <div className="col-md-3">
@@ -92,7 +98,7 @@ const Product = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
         </>
     )
 }
