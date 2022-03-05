@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Items = (props) => {
   return (
     <>
-      <div className="col-lg-4 col-md-7">
+      <div className="col-lg-4 col-md-6">
         <Link to="/customize">
           <div className="card">
             <img
