@@ -4,11 +4,15 @@ import './Home.css'
 import { Link } from 'react-router-dom'
 
 
-
 import Navbar from '../Navbar/Navbar'
-// import Tshirt from '../Three/Tshirt'
+import Tshirt from '../Three/Tshirt'
+import Hoodie from '../Three/Hoodie'
+import Tshirt2 from '../Three/Tshirt2'
+
+
 
 const Home = () => {
+
     return (
         <div>
             {/* <Navbar /> */}
@@ -98,30 +102,36 @@ const Home = () => {
 
                 <div className="row products-list">
                     <div className="col-lg-4 col-md-6">
-                        <div className="card">
-                            <img className="card-img-top" src="images/half-sleeve-tshirt.png" alt="Card image cap" />
-                            <div className="card-body">
-                                <p className="card-text">Half-sleeve T-Shirts</p>
+                        <a href="/customize">
+                            <div className="card">
+                                <img className="card-img-top" src="images/half-sleeve-tshirt.png" alt="Card image cap" />
+                                <div className="card-body">
+                                    <p className="card-text">Half-sleeve T-Shirts</p>
+                                </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
 
                     <div className="col-lg-4 col-md-6">
-                        <div className="card">
-                            <img className="card-img-top" src="images/full-sleeve-tshirt.png" alt="Card image cap" />
-                            <div className="card-body">
-                                <p className="card-text">Full-sleeve T-Shirts</p>
+                        <Link to="/customize">
+                            <div className="card">
+                                <img className="card-img-top" src="images/full-sleeve-tshirt.png" alt="Card image cap" />
+                                <div className="card-body">
+                                    <p className="card-text">Full-sleeve T-Shirts</p>
+                                </div>
                             </div>
-                        </div>
+                        </Link>
                     </div>
 
                     <div className="col-lg-4 col-md-6">
-                        <div className="card">
-                            <img className="card-img-top" src="images/hoodie.png" alt="Card image cap" />
-                            <div className="card-body">
-                                <p className="card-text">Hoodies</p>
+                        <a href="/customize">
+                            <div className="card">
+                                <img className="card-img-top" src="images/hoodie.png" alt="Card image cap" />
+                                <div className="card-body">
+                                    <p className="card-text">Hoodies</p>
+                                </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
 
                 </div>

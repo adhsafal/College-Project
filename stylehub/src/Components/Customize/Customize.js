@@ -14,7 +14,7 @@ import Login from '../Login/Login';
 
 
 
-const Customize = () => {
+const Customize = (props) => {
 
 
     const [quantity, setQuantity] = useState(1);
@@ -61,6 +61,8 @@ const Customize = () => {
                             width: '100%',
                         }}>
                             <Tshirt />
+
+
                         </div>
                     </div>
                     <div className="sections__right col-md-3" >
