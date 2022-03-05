@@ -61,8 +61,8 @@ const Customize = (props) => {
                             width: '100%',
                         }}>
                             <Tshirt />
-
-
+                            {/* <Hoodie /> */}
+                            {/* <Tshirt2 /> */}
                         </div>
                     </div>
                     <div className="sections__right col-md-3" >

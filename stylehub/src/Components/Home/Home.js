@@ -3,7 +3,7 @@ import React from 'react'
 import './Home.css'
 import { Link } from 'react-router-dom'
 
-
+import Items from '../Product/Items'
 import Navbar from '../Navbar/Navbar'
 import Tshirt from '../Three/Tshirt'
 import Hoodie from '../Three/Hoodie'
@@ -15,7 +15,6 @@ const Home = () => {
 
     return (
         <div>
-            {/* <Navbar /> */}
             <section id="intro">
                 <div id="nav">
                     <nav className="navbar navbar-expand-lg navbar-light">
@@ -101,38 +100,17 @@ const Home = () => {
                 </div>
 
                 <div className="row products-list">
-                    <div className="col-lg-4 col-md-6">
-                        <a href="/customize">
-                            <div className="card">
-                                <img className="card-img-top" src="images/half-sleeve-tshirt.png" alt="Card image cap" />
-                                <div className="card-body">
-                                    <p className="card-text">Half-sleeve T-Shirts</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
 
-                    <div className="col-lg-4 col-md-6">
-                        <Link to="/customize">
-                            <div className="card">
-                                <img className="card-img-top" src="images/full-sleeve-tshirt.png" alt="Card image cap" />
-                                <div className="card-body">
-                                    <p className="card-text">Full-sleeve T-Shirts</p>
-                                </div>
-                            </div>
-                        </Link>
-                    </div>
+                    <Items images="images/half-sleeve-tshirt.png"
+                        tname="Half-sleeve T-Shirts"
+                    />
+                    <Items images="images/full-sleeve-tshirt.png"
+                        tname="Full-sleeve T-Shirts"
+                    />
+                    <Items images="images/hoodie.png"
+                        tname="Hoodie"
+                    />
 
-                    <div className="col-lg-4 col-md-6">
-                        <a href="/customize">
-                            <div className="card">
-                                <img className="card-img-top" src="images/hoodie.png" alt="Card image cap" />
-                                <div className="card-body">
-                                    <p className="card-text">Hoodies</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
 
                 </div>
             </section>
