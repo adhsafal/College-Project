@@ -100,18 +100,36 @@ const Home = () => {
                 </div>
 
                 <div className="row products-list">
-
-                    <Items images="images/half-sleeve-tshirt.png"
-                        tname="Half-sleeve T-Shirts"
-                    />
-                    <Items images="images/full-sleeve-tshirt.png"
-                        tname="Full-sleeve T-Shirts"
-                    />
-                    <Items images="images/hoodie.png"
-                        tname="Hoodie"
-                    />
-
-
+                    <div className="col-lg-4 col-md-6">
+                        <Link to='/customize'>
+                            <div className="card">
+                                <img className="card-img-top" src="images/half-sleeve-tshirt.png" alt="Card image cap" />
+                                <div className="card-body">
+                                    <p className="card-text">Half-sleeve T-Shirts</p>
+                                </div>
+                            </div>
+                        </Link>
+                    </div>
+                    <div className="col-lg-4 col-md-6">
+                        <Link to='/customizeTwo'>
+                            <div className="card">
+                                <img className="card-img-top" src="images/full-sleeve-tshirt.png" alt="Card image cap" />
+                                <div className="card-body">
+                                    <p className="card-text">Full-sleeve T-Shirts</p>
+                                </div>
+                            </div>
+                        </Link>
+                    </div>
+                    <div className="col-lg-4 col-md-6">
+                        <Link to='/customizeThree'>
+                            <div className="card">
+                                <img className="card-img-top" src="images/hoodie.png" alt="Card image cap" />
+                                <div className="card-body">
+                                    <p className="card-text">Hoodie</p>
+                                </div>
+                            </div>
+                        </Link>
+                    </div>
                 </div>
             </section>
 

@@ -1,6 +1,8 @@
 import './App.css';
 import { Route, Routes } from 'react-router-dom'
 
+import CustomizeTwo from './Components/Customize/CustomizeTwo';
+import CustomizeThree from './Components/Customize/CustomizeThree';
 import Customize from './Components/Customize/Customize';
 import Home from './Components/Home/Home';
 import Product from './Components/Product/Product';
@@ -15,6 +17,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/product" element={<Product />} />
         <Route path="/customize" element={<Customize />} />
+        <Route path="/customizeTwo" element={<CustomizeTwo />} />
+        <Route path="/customizeThree" element={<CustomizeThree />} />
         <Route path="/login" element={<Login />} />
         <Route path="/registration" element={<Registration />} />
         <Route path="/cart" element={<Cart />} />
