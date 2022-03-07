@@ -59,6 +59,7 @@ const CustomizeTwo = (props) => {
                         <div className="customize__product" style={{
                             height: '100%',
                             width: '100%',
+
                         }}>
                             {/* <Tshirt /> */}
                             {/* <Hoodie /> */}

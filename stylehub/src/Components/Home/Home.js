@@ -3,7 +3,6 @@ import React from 'react'
 import './Home.css'
 import { Link } from 'react-router-dom'
 
-import Items from '../Product/Items'
 import Navbar from '../Navbar/Navbar'
 import Tshirt from '../Three/Tshirt'
 import Hoodie from '../Three/Hoodie'

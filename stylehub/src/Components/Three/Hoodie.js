@@ -45,10 +45,10 @@ function Shirt() {
             onPointerOut={(e) => e.intersections.length === 0 && set(null)}
             onPointerMissed={() => (state.current = null)}
             onClick={(e) => (e.stopPropagation(), (state.current = e.object.material.name))}>
-            <group rotation={[Math.PI / 2, 0, 0]} position={[0, -1.3, 0]}>
-                <mesh material-color={snap.items.front} geometry={nodes['model002_1'].geometry} material={materials.front} />
-                <mesh material-color={snap.items.back} geometry={nodes['model002_2'].geometry} material={materials.back} />
-                <mesh material-color={snap.items.hood} geometry={nodes['model002_3'].geometry} material={materials.hood} />
+            <group rotation={[Math.PI / 2, 0, 0]} position={[0, -5.25, 0]}>
+                <mesh scale={4} material-color={snap.items.front} geometry={nodes['model002_1'].geometry} material={materials.front} />
+                <mesh scale={4} material-color={snap.items.back} geometry={nodes['model002_2'].geometry} material={materials.back} />
+                <mesh scale={4} material-color={snap.items.hood} geometry={nodes['model002_3'].geometry} material={materials.hood} />
             </group>
 
 
@@ -82,7 +82,7 @@ const Hoodie = () => {
                     {/* <Environment preset="city" /> */}
                     <ContactShadows rotation-x={Math.PI / 2} position={[0, -0.8, 0]} opacity={0.25} width={10} height={10} blur={1.5} far={0.8} />
                 </Suspense>
-                <OrbitControls minPolarAngle={Math.PI / 2} maxPolarAngle={Math.PI / 2} enableZoom={true} enablePan={false} />
+                <OrbitControls minPolarAngle={Math.PI / 2} maxPolarAngle={Math.PI / 2} enableZoom={false} enablePan={false} />
             </Canvas>
             <Picker />
         </>
