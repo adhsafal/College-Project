@@ -45,7 +45,7 @@ function Shirt() {
             onPointerOut={(e) => e.intersections.length === 0 && set(null)}
             onPointerMissed={() => (state.current = null)}
             onClick={(e) => (e.stopPropagation(), (state.current = e.object.material.name))}>
-            <group position={[0, 1, 0.56]}>
+            <group position={[0, 1.3, 0.56]}>
                 <mesh scale={1.25} material-color={snap.items.Collar} geometry={nodes['T-shirt_2'].geometry} material={materials.Collar} />
                 <mesh scale={1.25} material-color={snap.items.Shirt} geometry={nodes['T-shirt_1'].geometry} material={materials.Shirt} />
                 <mesh scale={1.25} material-color={snap.items.Sleeve} geometry={nodes['T-shirt_3'].geometry} material={materials.Sleeve} />
