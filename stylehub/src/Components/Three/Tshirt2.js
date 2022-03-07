@@ -49,14 +49,14 @@ function Shirt() {
             onPointerOut={(e) => e.intersections.length === 0 && set(null)}
             onPointerMissed={() => (state.current = null)}
             onClick={(e) => (e.stopPropagation(), (state.current = e.object.material.name))}>
-            <group rotation={[1.6, 0, 0]} position={[0, -8, 0.56]}>
-                <mesh scale={0.29} material-color={snap.items.body} geometry={nodes['Shirt_1'].geometry} material={materials.body} />
-                <mesh scale={0.29} material-color={snap.items.lowerSleeve} geometry={nodes['Shirt_2'].geometry} material={materials.lowerSleeve} />
-                <mesh scale={0.29} material-color={snap.items.upperSleeve} geometry={nodes['Shirt_3'].geometry} material={materials.upperSleeve} />
-                <mesh scale={0.29} material-color={snap.items.belt} geometry={nodes['Shirt_4'].geometry} material={materials.belt} />
-                <mesh scale={0.29} material-color={snap.items.collar} geometry={nodes['Shirt_5'].geometry} material={materials.collar} />
-                <mesh scale={0.29} material-color={snap.items.bottomBase} geometry={nodes['Shirt_6'].geometry} material={materials.bottomBase} />
-                <mesh scale={0.29} material-color={snap.items.bottoms} geometry={nodes['Shirt_7'].geometry} material={materials.bottoms} />
+            <group rotation={[Math.PI / 2, 0, 0]} position={[0, -1.65, 0]}>
+                <mesh scale={0.042} material-color={snap.items.body} geometry={nodes['Shirt_1'].geometry} material={materials.body} />
+                <mesh scale={0.042} material-color={snap.items.lowerSleeve} geometry={nodes['Shirt_2'].geometry} material={materials.lowerSleeve} />
+                <mesh scale={0.042} material-color={snap.items.upperSleeve} geometry={nodes['Shirt_3'].geometry} material={materials.upperSleeve} />
+                <mesh scale={0.042} material-color={snap.items.belt} geometry={nodes['Shirt_4'].geometry} material={materials.belt} />
+                <mesh scale={0.042} material-color={snap.items.collar} geometry={nodes['Shirt_5'].geometry} material={materials.collar} />
+                <mesh scale={0.042} material-color={snap.items.bottomBase} geometry={nodes['Shirt_6'].geometry} material={materials.bottomBase} />
+                <mesh scale={0.042} material-color={snap.items.bottoms} geometry={nodes['Shirt_7'].geometry} material={materials.bottoms} />
             </group>
         </group>
     )
@@ -88,7 +88,7 @@ const Tshirt2 = () => {
                     {/* <Environment preset="city" /> */}
                     <ContactShadows rotation-x={Math.PI / 2} position={[0, -0.8, 0]} opacity={0.25} width={10} height={10} blur={1.5} far={0.8} />
                 </Suspense>
-                <OrbitControls minPolarAngle={Math.PI / 2} maxPolarAngle={Math.PI / 2} enableZoom={true} enablePan={false} />
+                <OrbitControls minPolarAngle={Math.PI / 2} maxPolarAngle={Math.PI / 2} enableZoom={false} enablePan={false} />
             </Canvas>
             <Picker />
         </>
