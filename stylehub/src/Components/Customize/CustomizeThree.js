@@ -7,6 +7,7 @@ import ButtonGroup from '@mui/material/ButtonGroup';
 import ButtonToggle from '@mui/material/ToggleButton'
 import TextField from '@mui/material/TextField';
 
+
 import Hoodie from '../Three/Hoodie'
 import Tshirt2 from '../Three/Tshirt2'
 import Tshirt from '../Three/Tshirt'
@@ -79,16 +80,19 @@ const CustomizeThree = () => {
                                     </ButtonToggle>
                                 ))}
                             </ButtonGroup>
-                        </div><br />
-                        <h3 style={{ fontWeight: 'bold' }}>Quantity</h3>
+                        </div>
                         <div className="customize__quantity">
-                            <ButtonGroup variant="text" aria-label="text button group">
-                                <Button onClick={decreaseQuantity} style={{ fontWeight: 'bold', color: 'black' }}>-</Button>
-                                <Button onClick={increaseQuantity} style={{ fontWeight: 'bold', color: 'black' }}>+</Button>
-                            </ButtonGroup>
-                            <p style={{ fontWeight: 'bold', fontSize: '20px' }}>{quantity}</p>
-                        </div><br />
-                        <button className='btn btn-outline-primary' onClick={cartText} style={{ fontWeight: 'bold', color: 'black' }}> {text} </button>
+                            <h3 style={{ fontWeight: 'bold' }}>Quantity</h3>
+
+                            <div className="sizeButton">
+                                <ButtonGroup variant="text" aria-label="text button group">
+                                    <Button onClick={decreaseQuantity} style={{ fontWeight: 'bold', color: 'black' }}>-</Button>
+                                    <Button onClick={increaseQuantity} style={{ fontWeight: 'bold', color: 'black' }}>+</Button>
+                                </ButtonGroup>
+                                <p style={{ fontWeight: 'bold', fontSize: '20px' }}>{quantity}</p>
+                            </div>
+                            <button className='btn btn-outline-primary addButton' onClick={cartText} style={{ fontWeight: 'bold', color: 'black' }}> {text} </button>
+                        </div>
                     </div>
                 </div>
             </section>

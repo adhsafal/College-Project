@@ -4,27 +4,22 @@ import { ContactShadows, Environment, useGLTF, OrbitControls } from "@react-thre
 import { HexColorPicker } from "react-colorful"
 import { proxy, useSnapshot } from "valtio"
 
+
 const state = proxy({
     current: null,
     items: {
-        Shirt: "#blue",
-        Collar: "green",
-        Sleeve: "#ffffff",
+        Shirt: "#6076e0",
+        Collar: "#dcd96c",
+        Sleeve: "#8dda60",
     },
 })
+
 
 function Shirt() {
     const ref = useRef()
     const snap = useSnapshot(state)
     const { nodes, materials } = useGLTF("./tshirt.glb")
 
-    // useFrame((state) => {
-    //     const t = state.clock.getElapsedTime()
-    //     ref.current.rotation.z = 0.03 - (1 + Math.sin(t / 1.5)) / 20
-    //     ref.current.rotation.x = Math.cos(t / 4) / 8
-    //     ref.current.rotation.y = Math.sin(t / 4) / 8
-    //     ref.current.position.y = (1 + Math.sin(t / 1.5)) / 10
-    // })
 
     // Cursor showing current color
     const [hovered, set] = useState(null)
@@ -59,13 +54,13 @@ function Picker() {
     const snap = useSnapshot(state)
     return (
         <div style={{
-            display: snap.current ? "block" : "none",
-            position: 'relative',
-            bottom: '300px',
-            left: '400px'
+            display: snap.current ? "block" : "block",
+            position: 'absolute',
+            top: '230px',
+            right: '185px'
         }}>
             <HexColorPicker className="picker" color={snap.items[snap.current]} onChange={(color) => (state.items[snap.current] = color)} />
-            <h1>{snap.current}</h1>
+            <h5>{snap.current}</h5>
         </div>
     )
 }
@@ -82,6 +77,7 @@ const Tshirt = () => {
                     <ContactShadows rotation-x={Math.PI / 2} position={[0, -0.8, 0]} opacity={0.25} width={10} height={10} blur={1.5} far={0.8} />
                 </Suspense>
                 <OrbitControls minPolarAngle={Math.PI / 2} maxPolarAngle={Math.PI / 2} enableZoom={false} enablePan={false} />
+
             </Canvas>
             <Picker />
         </>

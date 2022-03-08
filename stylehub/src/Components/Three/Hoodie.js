@@ -60,13 +60,13 @@ function Picker() {
     const snap = useSnapshot(state)
     return (
         <div style={{
-            display: snap.current ? "block" : "none",
-            position: 'relative',
-            bottom: '300px',
-            left: '400px'
+            display: snap.current ? "block" : "block",
+            position: 'absolute',
+            top: '230px',
+            right: '185px'
         }}>
             <HexColorPicker className="picker" color={snap.items[snap.current]} onChange={(color) => (state.items[snap.current] = color)} />
-            <h1>{snap.current}</h1>
+            <h5>{snap.current}</h5>
         </div>
     )
 }
@@ -80,7 +80,7 @@ const Hoodie = () => {
                 <Suspense fallback={null}>
                     <Shirt />
                     {/* <Environment preset="city" /> */}
-                    <ContactShadows rotation-x={Math.PI / 2} position={[0, -0.8, 0]} opacity={0.25} width={10} height={10} blur={1.5} far={0.8} />
+                    {/* <ContactShadows rotation-x={Math.PI / 2} position={[0, -0.2, -1.5]} opacity={0.25} width={10} height={10} blur={1.5} far={0.8} /> */}
                 </Suspense>
                 <OrbitControls minPolarAngle={Math.PI / 2} maxPolarAngle={Math.PI / 2} enableZoom={false} enablePan={false} />
             </Canvas>

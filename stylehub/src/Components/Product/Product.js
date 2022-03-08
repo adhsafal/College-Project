@@ -6,15 +6,19 @@ import Navbar from '../Navbar/Navbar'
 import Tshirt from '../Three/Tshirt'
 import Hoodie from '../Three/Hoodie'
 import Tshirt2 from '../Three/Tshirt2'
+import { CirclePicker } from 'react-color'
 
 const Product = () => {
     return (
         <>
             <Navbar />
+            <CirclePicker />
 
             <div className="carousel">
                 <a href=""></a>
             </div>
+
+
 
 
             {/* <div className="wrapper">
