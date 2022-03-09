@@ -12,7 +12,6 @@ const Product = () => {
     return (
         <>
             <Navbar />
-            <CirclePicker />
 
             <div className="carousel">
                 <a href=""></a>
