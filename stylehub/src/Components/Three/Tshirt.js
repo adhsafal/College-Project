@@ -3,6 +3,7 @@ import { Canvas, useFrame } from "@react-three/fiber"
 import { ContactShadows, Environment, useGLTF, OrbitControls } from "@react-three/drei"
 import { HexColorPicker } from "react-colorful"
 import { proxy, useSnapshot } from "valtio"
+import { color } from "@mui/system"
 
 
 const state = proxy({
@@ -55,6 +56,8 @@ function Shirt() {
 
 function Picker() {
     const snap = useSnapshot(state)
+
+
     return (
         <div style={{
             display: snap.current ? "block" : "block",
@@ -66,7 +69,8 @@ function Picker() {
             <h5 style={{
                 color: '#000',
                 textTransform: 'capitalize'
-            }}>{snap.current}</h5>
+            }}>{snap.current} {(state.items[snap.current])} </h5>
+
         </div>
     )
 }

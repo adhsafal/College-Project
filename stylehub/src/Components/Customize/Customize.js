@@ -91,6 +91,7 @@ const Customize = (props) => {
                             </div>
                             <button className='btn btn-outline-primary addButton' onClick={cartText} style={{ fontWeight: 'bold', color: 'black' }}> {text} </button>
                         </div>
+                        <div></div>
                     </div>
                 </div>
             </section>

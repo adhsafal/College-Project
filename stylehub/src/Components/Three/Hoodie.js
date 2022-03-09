@@ -69,7 +69,7 @@ function Picker() {
             <h5 style={{
                 color: '#000',
                 textTransform: 'capitalize'
-            }}>{snap.current}</h5>
+            }}>{snap.current} {(state.items[snap.current])}</h5>
         </div>
     )
 }
