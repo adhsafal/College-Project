@@ -12,7 +12,7 @@
 	/* border: 2px solid blue; */
 	height: min-content;
 	margin-left: 9em;
-	margin-top: 9em;
+	margin-top: 5em;
 }
 
 a {
@@ -42,6 +42,7 @@ a {
 	width: 100%;
 	min-height: 100%;
 	padding: 20px;
+	padding-top: 0;
 }
 
 #formContent {

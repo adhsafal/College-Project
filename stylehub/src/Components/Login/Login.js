@@ -6,10 +6,12 @@ import './Login.css'
 import { Link } from 'react-router-dom'
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import Logo from '../Logo/Logo';
+import Navbar from '../Navbar/Navbar';
 
 const Login = () => {
     return (
         <>
+            <Navbar />
             <div className='login'>
 
                 <div className="login__text">
@@ -27,7 +29,7 @@ const Login = () => {
                     </p>
                 </div>
                 <div class="wrapper fadeInDown">
-                    <h1 style={{ marginTop: '2em' }}>Sign In</h1><br />
+                    <h1 >Sign In</h1><br />
                     <div id="formContent">
                         <div className="fadeIn first">
                             <AccountCircleIcon style={{ fontSize: '3em' }} />

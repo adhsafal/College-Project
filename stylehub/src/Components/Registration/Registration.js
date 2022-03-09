@@ -2,11 +2,13 @@ import { fontWeight } from '@mui/system'
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Logo from '../Logo/Logo'
+import Navbar from '../Navbar/Navbar'
 
 
 const Registration = () => {
     return (
         <>
+            <Navbar />
             <div className='login'>
                 <div className="login__text">
                     <Logo />
@@ -22,15 +24,15 @@ const Registration = () => {
                         </Link>}
                     </p>
                 </div>
-                <div class="wrapper fadeInDown">
+                <div class="wrapper fadeInDown d-flex" style={{ marginTop: '0' }}>
                     <h1>Sign Up</h1><br />
                     <div id="formContent">
-                        <input type="text" id="email" className="fadeIn second" name="email" placeholder="Enter Email" style={{ marginTop: '2em' }} />
+                        <input type="text" id="email" className="fadeIn second" name="email" placeholder="Enter Email" style={{ marginTop: '1em' }} />
                         <input type="text" id="uname" className="fadeIn second" name="uname" placeholder="Create User name" />
                         <input type="text" id="number" className="fadeIn second" name="number" placeholder="Phn. number" />
                         <input type="text" id="password" className="fadeIn third" name="login" placeholder="Password" />
                         <input type="text" id="password" className="fadeIn third" name="login" placeholder="Confirm password" />
-                        <input type="submit" className="fadeIn fourth" value="Register" style={{ marginTop: '3em', fontWeight: 'bolder' }} />
+                        <input type="submit" className="fadeIn fourth" value="Register" style={{ margin: '1em ', fontWeight: 'bolder' }} />
 
                     </div>
                 </div>
