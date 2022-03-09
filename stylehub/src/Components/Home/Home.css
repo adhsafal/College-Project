@@ -33,7 +33,7 @@ p {
 			rgba(255, 255, 255, 0.5),
 			rgba(255, 255, 255, 0.5)
 		),
-		url("../images/light-background.jpg");
+		url("/stylehub/public/images/light-background.jpg");
 } */
 
 .intro-details {
@@ -199,6 +199,10 @@ p {
 	transform: scale(1.4);
 	transition: transform 0.3s;
 	color: #cc0033;
+}
+
+.slider_button {
+	color: black !important;
 }
 
 /* Media Section */

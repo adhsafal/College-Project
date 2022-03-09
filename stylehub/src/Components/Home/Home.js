@@ -160,13 +160,13 @@ const Home = () => {
                             <em>Aayam, Lalitpur</em>
                         </div>
                     </div>
-                    <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                    <button className="slider_button carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
                         data-bs-slide="prev">
                         <span className="carousel-control-prev-icon"></span>
                     </button>
-                    <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                    <button className=" carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
                         data-bs-slide="next">
-                        <span className="carousel-control-next-icon"></span>
+                        <span className=" carousel-control-next-icon"></span>
                     </button>
                 </div>
             </section>

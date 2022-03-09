@@ -41,6 +41,7 @@ function Shirt() {
         }
     }, [hovered])
 
+
     return (
         <group
             ref={ref}
@@ -72,7 +73,10 @@ function Picker() {
             right: '185px'
         }}>
             <HexColorPicker className="picker" color={snap.items[snap.current]} onChange={(color) => (state.items[snap.current] = color)} />
-            <h5>{snap.current}</h5>
+            <h5 style={{
+                color: '#000',
+                textTransform: 'capitalize'
+            }}>{snap.current}</h5>
         </div>
     )
 }
