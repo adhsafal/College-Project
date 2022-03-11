@@ -61,6 +61,15 @@ function Shirt() {
 
 function Picker() {
     const snap = useSnapshot(state)
+    const [col, setCol] = useState()
+
+    const handleColorPicker = (color) => {
+        state.items[snap.current] = color;
+        console.log(color, "col")
+        setCol(prev => ({ ...prev, [snap.current]: color }))
+    }
+    console.log(col)
+
     return (
         <div style={{
             display: snap.current ? "block" : "block",
@@ -68,7 +77,7 @@ function Picker() {
             top: '230px',
             right: '185px'
         }}>
-            <HexColorPicker className="picker" color={snap.items[snap.current]} onChange={(color) => (state.items[snap.current] = color)} />
+            <HexColorPicker className="picker" color={snap.items[snap.current]} onChange={(color) => handleColorPicker(color)} />
             <h5 style={{
                 color: '#000',
                 textTransform: 'capitalize'

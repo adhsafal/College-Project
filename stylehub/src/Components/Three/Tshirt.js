@@ -61,7 +61,6 @@ function Shirt() {
 
 function Picker() {
     const snap = useSnapshot(state)
-    const [tcolor, setTcolor] = useState((state.items[snap.current]))
     const [col, setCol] = useState()
 
     const handleColorPicker = (color) => {
@@ -83,8 +82,6 @@ function Picker() {
                 color: '#000',
                 textTransform: 'capitalize'
             }}>{snap.current} {(state.items[snap.current])} </h5>
-            <h5>{tcolor}</h5>
-
         </div>
     )
 }
