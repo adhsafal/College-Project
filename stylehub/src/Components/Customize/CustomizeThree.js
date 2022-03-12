@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Navbar from '../Navbar/Navbar'
 import './Customize.css'
 import styled from 'styled-components';
@@ -16,6 +16,8 @@ import Login from '../Login/Login';
 
 
 const CustomizeThree = () => {
+
+    const tname = 'Hoodie';
 
 
     const [quantity, setQuantity] = useState(1);
@@ -36,9 +38,34 @@ const CustomizeThree = () => {
         setText("Added to cart")
     }
 
-    const types = ['XS', 'S', 'M', 'L', 'XL', 'XXL']
+    const [size, setSize] = useState()
 
-    const [active, setActive] = useState(types[0]);
+    //to set on localStorage
+
+    const getLocalItems = () => {
+        let order = localStorage.getItem('Orders')
+        console.log(order);
+
+        if (order) {
+            return JSON.parse(localStorage.getItem('Orders'));
+        }
+        else {
+            return [];
+        }
+    }
+
+    const [items, setItems] = useState(getLocalItems())
+
+    const addItems = () => {
+        setItems([...items, [tname, size, quantity]])
+    }
+
+    //Adding data to local storage
+
+    useEffect(() => {
+        localStorage.setItem('Orders', JSON.stringify(items))
+    }, [items]);
+
 
     return (
         <>
@@ -67,19 +94,17 @@ const CustomizeThree = () => {
                         </div>
                     </div>
                     <div className="sections__right col-md-3" >
-                        <div className="customize__sizes">
-                            <h3 style={{ fontWeight: 'bold' }}>Size</h3>
-                            <ButtonGroup variant="text" aria-label="text button group" onClick={() => setActive()}>
-                                {types.map(type => (
-                                    <ButtonToggle
-                                        key={type}
-                                        active={active === type}
-                                        onClick={() => setActive(type)}
-                                    >
-                                        {type}
-                                    </ButtonToggle>
-                                ))}
+                        <div className="customize__sizes " >
+                            <h3 style={{ fontWeight: 'bold' }}>Sizes</h3>
+                            <ButtonGroup variant="text" aria-label="text button group">
+                                <Button onClick={() => setSize('XS')}>XS</Button>
+                                <Button onClick={() => setSize('S')}>S</Button>
+                                <Button onClick={() => setSize('M')}>M</Button>
+                                <Button onClick={() => setSize('L')}>L</Button>
+                                <Button onClick={() => setSize('XL')}>XL</Button>
+                                <Button onClick={() => setSize('XXL')}>XXL</Button>
                             </ButtonGroup>
+                            <h5 style={{ color: 'red' }}>{size}</h5>
                         </div>
                         <div className="customize__quantity">
                             <h3 style={{ fontWeight: 'bold' }}>Quantity</h3>
@@ -91,7 +116,7 @@ const CustomizeThree = () => {
                                 </ButtonGroup>
                                 <p style={{ fontWeight: 'bold', fontSize: '20px' }}>{quantity}</p>
                             </div>
-                            <button className='btn btn-outline-primary addButton' onClick={cartText} style={{ fontWeight: 'bold', color: 'black' }}> {text} </button>
+                            <button className='btn btn-outline-primary addButton' onClick={addItems} style={{ fontWeight: 'bold', color: 'black' }}> {text} </button>
                         </div>
                     </div>
                 </div>
