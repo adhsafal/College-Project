@@ -1,23 +1,21 @@
 import React, { useEffect, useState } from 'react'
 import Navbar from '../Navbar/Navbar'
 import './Customize.css'
-import styled from 'styled-components';
 import Button from '@mui/material/Button';
 import ButtonGroup from '@mui/material/ButtonGroup';
-import ButtonToggle from '@mui/material/ToggleButton'
-import TextField from '@mui/material/TextField';
 
-import Hoodie from '../Three/Hoodie'
-import Tshirt2 from '../Three/Tshirt2'
+// import Hoodie from '../Three/Hoodie'
+// import Tshirt2 from '../Three/Tshirt2'
 import Tshirt from '../Three/Tshirt'
-import Login from '../Login/Login';
+// import Login from '../Login/Login';
+
+import Cart from "../Cart/Cart"
+
+
 
 
 
 const Customize = () => {
-
-    const tname = 'Half Sleeve'
-
 
     const [quantity, setQuantity] = useState(1);
 
@@ -55,8 +53,14 @@ const Customize = () => {
 
     const [items, setItems] = useState(getLocalItems())
 
+    let item = {
+        tname: 'Half Sleeve',
+        size,
+        quantity
+    }
+
     const addItems = () => {
-        setItems([...items, [tname, size, quantity]])
+        setItems([...items, item])
     }
 
     //Adding data to local storage
@@ -117,7 +121,6 @@ const Customize = () => {
                             </div>
                             <button className='btn btn-outline-primary addButton' /*onClick={cartText}*/ onClick={addItems} style={{ fontWeight: 'bold', color: 'black' }}> {text} </button>
                         </div>
-                        <div></div>
                     </div>
                 </div>
             </section>

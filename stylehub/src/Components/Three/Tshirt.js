@@ -3,7 +3,6 @@ import { Canvas, useFrame } from "@react-three/fiber"
 import { ContactShadows, Environment, useGLTF, OrbitControls } from "@react-three/drei"
 import { HexColorPicker } from "react-colorful"
 import { proxy, useSnapshot } from "valtio"
-import { color } from "@mui/system"
 
 
 const state = proxy({
@@ -59,34 +58,38 @@ function Shirt() {
     )
 }
 
-function Picker() {
-    const snap = useSnapshot(state)
-    const [col, setCol] = useState()
 
-    const handleColorPicker = (color) => {
-        state.items[snap.current] = color;
-        console.log(color, col)
-        setCol(prev => ({ ...prev, [snap.current]: color }))
-    }
-    console.log(col)
-
-    return (
-        <div style={{
-            display: snap.current ? "block" : "block",
-            position: 'absolute',
-            top: '230px',
-            right: '185px'
-        }}>
-            <HexColorPicker className="picker" color={snap.items[snap.current]} onChange={(color) => handleColorPicker(color)} />
-            <h5 style={{
-                color: '#000',
-                textTransform: 'capitalize'
-            }}>{snap.current} {(state.items[snap.current])} </h5>
-        </div>
-    )
-}
 
 const Tshirt = () => {
+
+    function Picker() {
+        const snap = useSnapshot(state)
+        const [col, setCol] = useState()
+
+        const handleColorPicker = (color) => {
+            state.items[snap.current] = color;
+            console.log([snap.current], color)
+            setCol(prev => ({ ...prev, [snap.current]: color }))
+        }
+        console.log(col)
+
+
+        return (
+            <div style={{
+                display: snap.current ? "block" : "block",
+                position: 'absolute',
+                top: '230px',
+                right: '185px'
+            }}>
+                <HexColorPicker className="picker" color={snap.items[snap.current]} onChange={(color) => handleColorPicker(color)} />
+                <h5 style={{
+                    color: '#000',
+                    textTransform: 'capitalize'
+                }}>{snap.current} {(state.items[snap.current])} </h5>
+            </div>
+        )
+    }
+
     return (
         <>
             <Canvas shadows dpr={[1, 2]} camera={{ position: [0, 0, 4], fov: 50 }}>

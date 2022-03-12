@@ -1,7 +1,7 @@
 import React from 'react'
 import Navbar from '../Navbar/Navbar'
 
-const Cart = (props) => {
+const Cart = () => {
     return (
         <div>
             <Navbar />

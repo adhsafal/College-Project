@@ -1,24 +1,18 @@
 import React, { useState, useEffect } from 'react'
 import Navbar from '../Navbar/Navbar'
 import './Customize.css'
-import styled from 'styled-components';
 import Button from '@mui/material/Button';
 import ButtonGroup from '@mui/material/ButtonGroup';
-import ButtonToggle from '@mui/material/ToggleButton'
-import TextField from '@mui/material/TextField';
 
 
-import Hoodie from '../Three/Hoodie'
+// import Hoodie from '../Three/Hoodie'
 import Tshirt2 from '../Three/Tshirt2'
-import Tshirt from '../Three/Tshirt'
-import Login from '../Login/Login';
+// import Tshirt from '../Three/Tshirt'
+// import Login from '../Login/Login';
 
 
 
 const CustomizeTwo = () => {
-
-    const tname = "Full Sleeve";
-
 
     const [quantity, setQuantity] = useState(1);
 
@@ -55,8 +49,14 @@ const CustomizeTwo = () => {
 
     const [items, setItems] = useState(getLocalItems())
 
+    let item = {
+        tname: 'Full Sleeve',
+        size,
+        quantity
+    }
+
     const addItems = () => {
-        setItems([...items, [tname, size, quantity]])
+        setItems([...items, item])
     }
 
     //Adding data to local storage
