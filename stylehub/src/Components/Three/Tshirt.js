@@ -65,7 +65,7 @@ function Picker() {
 
     const handleColorPicker = (color) => {
         state.items[snap.current] = color;
-        console.log(color, "col")
+        console.log(color, col)
         setCol(prev => ({ ...prev, [snap.current]: color }))
     }
     console.log(col)

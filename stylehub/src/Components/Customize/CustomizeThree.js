@@ -44,7 +44,6 @@ const CustomizeThree = () => {
 
     const getLocalItems = () => {
         let order = localStorage.getItem('Orders')
-        console.log(order);
 
         if (order) {
             return JSON.parse(localStorage.getItem('Orders'));
