@@ -1,14 +1,15 @@
-import './App.css';
-import { Route, Routes } from 'react-router-dom'
+import "./App.css";
+import { Route, Routes } from "react-router-dom";
+import React from "react";
 
-import CustomizeTwo from './Components/Customize/CustomizeTwo';
-import CustomizeThree from './Components/Customize/CustomizeThree';
-import Customize from './Components/Customize/Customize';
-import Home from './Components/Home/Home';
-import Product from './Components/Product/Product';
-import Login from './Components/Login/Login'
-import Registration from './Components/Registration/Registration';
-import Cart from './Components/Cart/Cart';
+import CustomizeTwo from "./Components/Customize/CustomizeTwo";
+import CustomizeThree from "./Components/Customize/CustomizeThree";
+import Customize from "./Components/Customize/Customize";
+import Home from "./Components/Home/Home";
+import Product from "./Components/Product/Product";
+import Login from "./Components/Login/Login";
+import Registration from "./Components/Registration/Registration";
+import Cart from "./Components/Cart/Cart";
 
 function App() {
   return (
@@ -22,7 +23,6 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/registration" element={<Registration />} />
         <Route path="/cart" element={<Cart />} />
-
       </Routes>
     </>
   );
