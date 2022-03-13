@@ -1,7 +1,22 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Navbar from '../Navbar/Navbar'
 
 const Cart = () => {
+
+    const [quantity, setQuantity] = useState(1);
+
+    const increaseQuantity = () => {
+        setQuantity(quantity + 1);
+    }
+
+    const decreaseQuantity = () => {
+        if (quantity > 1) {
+            setQuantity(quantity - 1);
+        }
+    }
+
+
+
     return (
         <div>
             <Navbar />
@@ -20,7 +35,7 @@ const Cart = () => {
                                 <div className="card-body p-4">
                                     <div className="row d-flex justify-content-between align-items-center">
                                         <div className="col-md-2 col-lg-2 col-xl-2">
-                                            <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-shopping-carts/img1.webp"
+                                            <img src="images/hoodie.png"
                                                 className="img-fluid rounded-3" alt="Cotton T-shirt" />
                                         </div>
                                         <div className="col-md-3 col-lg-3 col-xl-3">
@@ -29,18 +44,17 @@ const Cart = () => {
                                         </div>
                                         <div className="col-md-3 col-lg-3 col-xl-2 d-flex">
                                             <button className="btn btn-link px-2"
-                                                onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
+                                                onClick={() => decreaseQuantity()}>
                                                 <i className="fas fa-minus"></i>
                                             </button>
-                                            <input id="form1" min="0" name="quantity" value="2" type="number"
-                                                className="form-control form-control-sm" />
+                                            <p className="form-control form-control-sm">{quantity}</p>
                                             <button className="btn btn-link px-2"
-                                                onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
+                                                onClick={() => increaseQuantity()}>
                                                 <i className="fas fa-plus"></i>
                                             </button>
                                         </div>
                                         <div className="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
-                                            <h5 className="mb-0">$499.00</h5>
+                                            <h5 className="mb-0">Nrs. 2800</h5>
                                         </div>
                                         <div className="col-md-1 col-lg-1 col-xl-1 text-end">
                                             <a href="#!" className="text-danger"><i className="fas fa-trash fa-lg"></i></a>
@@ -52,7 +66,7 @@ const Cart = () => {
                                 <div className="card-body p-4">
                                     <div className="row d-flex justify-content-between align-items-center">
                                         <div className="col-md-2 col-lg-2 col-xl-2">
-                                            <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-shopping-carts/img1.webp"
+                                            <img src="images/full-sleeve-tshirt.png"
                                                 className="img-fluid rounded-3" alt="Cotton T-shirt" />
                                         </div>
                                         <div className="col-md-3 col-lg-3 col-xl-3">
@@ -61,18 +75,17 @@ const Cart = () => {
                                         </div>
                                         <div className="col-md-3 col-lg-3 col-xl-2 d-flex">
                                             <button className="btn btn-link px-2"
-                                                onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
+                                                onClick={() => decreaseQuantity()}>
                                                 <i className="fas fa-minus"></i>
                                             </button>
-                                            <input id="form1" min="0" name="quantity" value="2" type="number"
-                                                className="form-control form-control-sm" />
+                                            <p className="form-control form-control-sm">{quantity}</p>
                                             <button className="btn btn-link px-2"
-                                                onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
+                                                onClick={() => increaseQuantity()}>
                                                 <i className="fas fa-plus"></i>
                                             </button>
                                         </div>
                                         <div className="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
-                                            <h5 className="mb-0">$499.00</h5>
+                                            <h5 className="mb-0">Nrs. 2000</h5>
                                         </div>
                                         <div className="col-md-1 col-lg-1 col-xl-1 text-end">
                                             <a href="#!" className="text-danger"><i className="fas fa-trash fa-lg"></i></a>
@@ -84,7 +97,7 @@ const Cart = () => {
                                 <div className="card-body p-4">
                                     <div className="row d-flex justify-content-between align-items-center">
                                         <div className="col-md-2 col-lg-2 col-xl-2">
-                                            <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-shopping-carts/img1.webp"
+                                            <img src="images/hoodie.png"
                                                 className="img-fluid rounded-3" alt="Cotton T-shirt" />
                                         </div>
                                         <div className="col-md-3 col-lg-3 col-xl-3">
@@ -93,18 +106,17 @@ const Cart = () => {
                                         </div>
                                         <div className="col-md-3 col-lg-3 col-xl-2 d-flex">
                                             <button className="btn btn-link px-2"
-                                                onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
+                                                onClick={() => decreaseQuantity()}>
                                                 <i className="fas fa-minus"></i>
                                             </button>
-                                            <input id="form1" min="0" name="quantity" value="2" type="number"
-                                                className="form-control form-control-sm" />
+                                            <p className="form-control form-control-sm">{quantity}</p>
                                             <button className="btn btn-link px-2"
-                                                onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
+                                                onClick={() => increaseQuantity()}>
                                                 <i className="fas fa-plus"></i>
                                             </button>
                                         </div>
                                         <div className="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
-                                            <h5 className="mb-0">$499.00</h5>
+                                            <h5 className="mb-0">Nrs. 2800</h5>
                                         </div>
                                         <div className="col-md-1 col-lg-1 col-xl-1 text-end">
                                             <a href="#!" className="text-danger"><i className="fas fa-trash fa-lg"></i></a>
@@ -116,7 +128,7 @@ const Cart = () => {
                                 <div className="card-body p-4">
                                     <div className="row d-flex justify-content-between align-items-center">
                                         <div className="col-md-2 col-lg-2 col-xl-2">
-                                            <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-shopping-carts/img1.webp"
+                                            <img src="images/half-sleeve-tshirt.png"
                                                 className="img-fluid rounded-3" alt="Cotton T-shirt" />
                                         </div>
                                         <div className="col-md-3 col-lg-3 col-xl-3">
@@ -125,18 +137,17 @@ const Cart = () => {
                                         </div>
                                         <div className="col-md-3 col-lg-3 col-xl-2 d-flex">
                                             <button className="btn btn-link px-2"
-                                                onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
+                                                onClick={() => decreaseQuantity()}>
                                                 <i className="fas fa-minus"></i>
                                             </button>
-                                            <input id="form1" min="0" name="quantity" value="2" type="number"
-                                                className="form-control form-control-sm" />
+                                            <p className="form-control form-control-sm">{quantity}</p>
                                             <button className="btn btn-link px-2"
-                                                onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
+                                                onClick={() => increaseQuantity()}>
                                                 <i className="fas fa-plus"></i>
                                             </button>
                                         </div>
                                         <div className="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
-                                            <h5 className="mb-0">$499.00</h5>
+                                            <h5 className="mb-0">Nrs. 1800</h5>
                                         </div>
                                         <div className="col-md-1 col-lg-1 col-xl-1 text-end">
                                             <a href="#!" className="text-danger"><i className="fas fa-trash fa-lg"></i></a>

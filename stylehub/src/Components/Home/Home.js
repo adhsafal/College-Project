@@ -56,9 +56,9 @@ const Home = () => {
                                         <li className='nav-item'>
                                             <button type="button" className="btn position-relative">
                                                 <Link to='/cart'><ShoppingCartIcon className='icons' /></Link>
-                                                <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                                {/* <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                                                     0
-                                                </span>
+                                                </span> */}
                                             </button>
                                         </li>
                                     </ul>
