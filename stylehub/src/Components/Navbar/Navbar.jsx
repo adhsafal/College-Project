@@ -20,7 +20,7 @@ const Navbar = () => {
                 </button>
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav">
-                        <li className="nav-item">
+                        {/* <li className="nav-item">
                             <Link className="nav-link navbar__links active" aria-current="page" to="/">Home</Link>
                         </li>
                         <li className="nav-item">
@@ -28,7 +28,7 @@ const Navbar = () => {
                         </li>
                         <li className="nav-item">
                             <Link className="nav-link navbar__links" to="/customize">Customize</Link>
-                        </li>
+                        </li> */}
                         <div className="navbar__icons">
                             <li className='nav-item'>
                                 <button type="button" className="btn position-relative">

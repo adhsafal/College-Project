@@ -8,6 +8,10 @@ p {
 	color: rgba(82, 79, 79, 0.945);
 }
 
+::-webkit-scrollbar {
+	display: none;
+}
+
 /* Navbar section */
 #nav {
 	padding: 0 5%;
@@ -15,6 +19,15 @@ p {
 
 .nav-item {
 	padding: 0 18px;
+}
+
+ul.navbar-nav {
+	margin: 0 !important;
+}
+
+.navbar__icons ul {
+	list-style-type: none;
+	display: flex;
 }
 
 .nav-link {
