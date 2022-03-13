@@ -2,11 +2,11 @@ import { ForkLeft } from '@mui/icons-material'
 import React from 'react'
 import './Home.css'
 import { Link } from 'react-router-dom'
+import '../Navbar/Navbar.css'
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 
-import Navbar from '../Navbar/Navbar'
-import Tshirt from '../Three/Tshirt'
-import Hoodie from '../Three/Hoodie'
-import Tshirt2 from '../Three/Tshirt2'
+
 
 
 
@@ -39,13 +39,30 @@ const Home = () => {
                                     <li className="nav-item">
                                         <a className="nav-link" href="#products">Products</a>
                                     </li>
-                                    <li className="nav-item">
+                                    {/* <li className="nav-item">
                                         <a className="nav-link" href="#">Customize</a>
-                                    </li>
+                                    </li> */}
                                     <li className="nav-item">
-                                        <a className="nav-link" href="#">About Us</a>
+                                        <a className="nav-link" href="#testimonials">About Us</a>
                                     </li>
                                 </ul>
+                                <div className="navbar__icons">
+                                    <ul>
+                                        <li className='nav-item'>
+                                            <button type="button" className="btn position-relative">
+                                                <Link to='/login'><AccountCircleIcon className='icons' /></Link>
+                                            </button>
+                                        </li>
+                                        <li className='nav-item'>
+                                            <button type="button" className="btn position-relative">
+                                                <Link to='/cart'><ShoppingCartIcon className='icons' /></Link>
+                                                {/* <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                                    0
+                                                </span> */}
+                                            </button>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </nav>

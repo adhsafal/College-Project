@@ -10,6 +10,7 @@ import Tshirt from '../Three/Tshirt'
 // import Login from '../Login/Login';
 
 import Cart from "../Cart/Cart"
+import { Picker } from '../Three/Tshirt';
 
 
 
@@ -56,7 +57,8 @@ const Customize = () => {
     let item = {
         tname: 'Half Sleeve',
         size,
-        quantity
+        quantity,
+
     }
 
     const addItems = () => {
@@ -68,8 +70,6 @@ const Customize = () => {
     useEffect(() => {
         localStorage.setItem('Orders', JSON.stringify(items))
     }, [items]);
-
-
 
     return (
         <>
@@ -109,13 +109,14 @@ const Customize = () => {
                             <h5 style={{ color: 'red' }}>{size}</h5>
                         </div>
 
+
                         <div className="customize__quantity">
                             <h3 style={{ fontWeight: 'bold' }}>Quantity</h3>
 
                             <div className="sizeButton">
                                 <ButtonGroup variant="text" aria-label="text button group">
-                                    <Button onClick={decreaseQuantity} style={{ fontWeight: 'bold', color: 'black' }}>-</Button>
-                                    <Button onClick={increaseQuantity} style={{ fontWeight: 'bold', color: 'black' }}>+</Button>
+                                    <Button onClick={decreaseQuantity} style={{ fontWeight: 'bold', color: 'black' }}><i className="fas fa-minus"></i></Button>
+                                    <Button onClick={increaseQuantity} style={{ fontWeight: 'bold', color: 'black' }}><i className="fas fa-plus"></i></Button>
                                 </ButtonGroup>
                                 <p style={{ fontWeight: 'bold', fontSize: '20px' }}>{quantity}</p>
                             </div>

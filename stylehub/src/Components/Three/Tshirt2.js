@@ -69,6 +69,38 @@ function Picker() {
     }
     console.log(col)
 
+
+    const getLocalItems = () => {
+        let tcolor = localStorage.getItem('Colors')
+
+
+        if (tcolor) {
+            return JSON.parse(localStorage.getItem('Colors'));
+        }
+        else {
+            return [];
+        }
+    }
+
+    const [tshirtColors, setTshirtColors] = useState(getLocalItems())
+
+    let element = {
+        tname: 'Full Sleeve',
+        col
+
+
+    }
+
+    const addColors = () => {
+        setTshirtColors([...tshirtColors, element])
+    }
+
+    //Adding data to local storage
+
+    useEffect(() => {
+        localStorage.setItem('Colors', JSON.stringify(tshirtColors))
+    }, [tshirtColors]);
+
     return (
         <div style={{
             display: snap.current ? "block" : "block",
@@ -76,7 +108,7 @@ function Picker() {
             top: '230px',
             right: '185px'
         }}>
-            <HexColorPicker className="picker" color={snap.items[snap.current]} onChange={(color) => handleColorPicker(color)} />
+            <HexColorPicker className="picker" color={snap.items[snap.current]} onChange={(color) => handleColorPicker(color)} onClick={addColors} />
             <h5 style={{
                 color: '#000',
                 textTransform: 'capitalize'

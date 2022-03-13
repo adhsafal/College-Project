@@ -110,8 +110,8 @@ const CustomizeThree = () => {
 
                             <div className="sizeButton">
                                 <ButtonGroup variant="text" aria-label="text button group">
-                                    <Button onClick={decreaseQuantity} style={{ fontWeight: 'bold', color: 'black' }}>-</Button>
-                                    <Button onClick={increaseQuantity} style={{ fontWeight: 'bold', color: 'black' }}>+</Button>
+                                    <Button onClick={decreaseQuantity} style={{ fontWeight: 'bold', color: 'black' }}><i className="fas fa-minus"></i></Button>
+                                    <Button onClick={increaseQuantity} style={{ fontWeight: 'bold', color: 'black' }}><i className="fas fa-plus"></i></Button>
                                 </ButtonGroup>
                                 <p style={{ fontWeight: 'bold', fontSize: '20px' }}>{quantity}</p>
                             </div>
