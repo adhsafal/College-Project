@@ -20,8 +20,9 @@ class Login extends Component {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(this.state.credentials),
     })
+      .then((data) => data.json())
       .then((data) => {
-        console.log(data);
+        console.log(data.token);
       })
       .catch((error) => console.error(error));
   };
