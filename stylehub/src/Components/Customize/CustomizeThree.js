@@ -77,7 +77,7 @@ const CustomizeThree = () => {
                             Customize it Yourself
                         </h4>
                         <h1 style={{ fontWeight: 'bold' }}>
-                            T-Shirt
+                            Hoodie
                         </h1>
                         <p style={{ fontWeight: 'bold' }}>Please select the appropriate size and color you want in your T-shirt</p>
 

@@ -9,8 +9,9 @@ import ButtonGroup from '@mui/material/ButtonGroup';
 import Tshirt from '../Three/Tshirt'
 // import Login from '../Login/Login';
 
-import Cart from "../Cart/Cart"
-import { Picker } from '../Three/Tshirt';
+// import Cart from "../Cart/Cart"
+// import { Picker } from '../Three/Tshirt';
+// import { collapseClasses } from '@mui/material';
 
 
 
@@ -32,13 +33,14 @@ const Customize = () => {
 
     const [text, setText] = useState("Add to Cart");
 
-    const cartText = () => {
-        setText("Added to cart")
-    }
+    // const cartText = () => {
+    //     setText("Added to cart")
+    // }
 
     const [size, setSize] = useState()
 
     //to set on localStorage
+
 
     const getLocalItems = () => {
         let order = localStorage.getItem('Orders')
@@ -108,6 +110,8 @@ const Customize = () => {
                             </ButtonGroup>
                             <h5 style={{ color: 'red' }}>{size}</h5>
                         </div>
+
+
 
 
                         <div className="customize__quantity">

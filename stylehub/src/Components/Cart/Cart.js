@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Navbar from '../Navbar/Navbar'
 
 const Cart = () => {
@@ -15,11 +15,40 @@ const Cart = () => {
         }
     }
 
+    const [items, setItems] = useState([]);
 
+    useEffect(() => {
+        const items = JSON.parse(localStorage.getItem('Orders'));
+        if (items) {
+            setItems(items);
+        }
+    }, []);
+
+    console.log(items)
+
+    const [colors, setColors] = useState([]);
+
+    useEffect(() => {
+        const colors = JSON.parse(localStorage.getItem('Colors'));
+        if (colors) {
+            setColors(colors);
+        }
+    }, []);
+
+    console.log(colors)
 
     return (
         <div>
             <Navbar />
+
+            <div className="orders">
+                {items.map((item, index) => {
+                    <p key={index}>{item}</p>
+
+                })
+
+                }
+            </div>
             <section className="h-100" style={{ backgroundColor: '#eee' }}>
                 <div className="container h-100 py-5">
                     <div className="row d-flex justify-content-center align-items-center h-100">
@@ -173,6 +202,14 @@ const Cart = () => {
                     </div>
                 </div>
             </section>
+            <div className="orders">
+                {items.map((item, index) => {
+                    <p key={index}>{item}</p>
+
+                })
+
+                }
+            </div>
         </div>
     )
 }
