@@ -1,6 +1,6 @@
 import React, { Suspense, useRef, useState, useEffect } from "react"
-import { Canvas, useFrame } from "@react-three/fiber"
-import { ContactShadows, Environment, useGLTF, OrbitControls } from "@react-three/drei"
+import { Canvas } from "@react-three/fiber"
+import { ContactShadows, useGLTF, OrbitControls } from "@react-three/drei"
 import { HexColorPicker } from "react-colorful"
 import { proxy, useSnapshot } from "valtio"
 
@@ -102,18 +102,20 @@ const Picker = () => {
     }, [tshirtColors]);
 
     return (
-        <div style={{
-            display: snap.current ? "block" : "block",
-            position: 'absolute',
-            top: '230px',
-            right: '185px'
-        }}>
-            <HexColorPicker className="picker" color={snap.items[snap.current]} onChange={(color) => handleColorPicker(color)} onClick={addColors} />
-            <h5 style={{
-                color: '#000',
-                textTransform: 'capitalize'
-            }}>{snap.current} {(state.items[snap.current])} </h5>
-        </div>
+        <>
+            <div style={{
+                display: snap.current ? "block" : "block",
+                position: 'absolute',
+                top: '230px',
+                right: '185px'
+            }}>
+                <HexColorPicker className="picker" color={snap.items[snap.current]} onChange={(color) => handleColorPicker(color)} onClick={addColors} />
+                <h5 style={{
+                    color: '#000',
+                    textTransform: 'capitalize'
+                }}>{snap.current} {(state.items[snap.current])} </h5>
+            </div>
+        </>
     )
 }
 
